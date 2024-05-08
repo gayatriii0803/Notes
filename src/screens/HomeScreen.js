@@ -8,8 +8,8 @@ class HomeScreen extends Component {
     super(props)
     this.state={
       courses:[
-        {id:1,name:'BSC-IT'},
-        {id:2,name:'BSC-CS'}
+        {id:1,name:'BSC_IT'},
+        {id:2,name:'BSC_CS'}
       ]
     }
 

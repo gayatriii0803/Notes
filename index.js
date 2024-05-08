@@ -7,5 +7,9 @@ import HomeScreen from './src/screens/HomeScreen';
 import {name as appName} from './app.json';
 import SemesterScreen from './src/screens/SemesterScreen';
 import SubjectScreen from './src/screens/SubjectScreen';
+import App from './App';
+import LoginScreen from './src/screens/LoginScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
 
-AppRegistry.registerComponent(appName, () => HomeScreen);
+
+AppRegistry.registerComponent(appName, () =>App );

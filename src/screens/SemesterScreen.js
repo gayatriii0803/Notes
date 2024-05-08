@@ -7,15 +7,22 @@ class SemesterScreen extends Component {
         super(props)
         this.state={
           semesters: [
-            { id: 1, name: 'Semester 1' },
-            { id: 2, name: 'Semester 2' },
-            { id: 3, name: 'Semester 3' },
-            { id: 4, name: 'Semester 4' },
-            { id: 5, name: 'Semester 5' },
-            { id: 6, name: 'Semester 6' }
-          ]
+            { id: '1', name: 'Semester 1' },
+            { id: '2', name: 'Semester 2' },
+            { id: '3', name: 'Semester 3' },
+            { id: '4', name: 'Semester 4' },
+            { id: '5', name: 'Semester 5' },
+            { id: '6', name: 'Semester 6' }
+          ],
+          course: this.props.route.params.courseName,
           }
     }
+
+  
+    componentDidMount(){
+      console.log('course name',this.state.course)
+    }
+
   render() {
     return (
       <View style={{flex:1}}>
@@ -24,7 +31,7 @@ class SemesterScreen extends Component {
         </View>
         <View style={{justifyContent:'center',flex:1}}>
         {this.state.semesters.map(semester =>(
-          <SemesterCard id={semester.id} name={semester.name}/>
+          <SemesterCard id={semester.id} name={semester.name} course={this.state.course}/>
         ))}
         </View>
       </View>

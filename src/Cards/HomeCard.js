@@ -1,13 +1,17 @@
 import { View, Text ,TouchableOpacity} from 'react-native'
 import React from 'react'
 import SemesterScreen from '../screens/SemesterScreen'
-
+import { navigate } from '../navigators/RootNavigation';
 
 
 const HomeCard = ({id,name}) => {
  
   return (
     <TouchableOpacity
+    onPress={()=>{
+      navigate('SemesterScreen',{
+        courseName:name
+      })}}
     
     style={{
       backgroundColor: 'pink',

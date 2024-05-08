@@ -1,9 +1,17 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { navigate } from '../navigators/RootNavigation';
+import SubjectScreen from '../screens/SubjectScreen';
 
-const SemesterCard = ({id, name}) => {
+const SemesterCard = ({id, name, course}) => {
   return (
     <TouchableOpacity
+    onPress={()=>{
+      navigate('SubjectScreen',{
+        semName:id,
+        course:course
+      })
+    }}
           style={{
             backgroundColor: 'pink',
             height: 'auto',
