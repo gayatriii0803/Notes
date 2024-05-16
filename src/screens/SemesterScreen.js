@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import SemesterCard from '../Cards/SemesterCard';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class SemesterScreen extends Component {
     constructor(props){
@@ -25,11 +26,11 @@ class SemesterScreen extends Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <View style={{ alignItems: 'center' }}>
-          <Text style={{ fontSize: 22 }}>Semesters</Text>
+      <View style={{flex:1,alignContent:'center',justifyContent:'center'}}>
+        <View style={{ marginBottom:hp(6) }}>
+          <Text style={{fontSize: 30,textAlign: 'center',color:'black'}}>SEMESTERS</Text>
         </View>
-        <View style={{justifyContent:'center',flex:1}}>
+        <View style={{marginHorizontal:wp(3)}}>
         {this.state.semesters.map(semester =>(
           <SemesterCard id={semester.id} name={semester.name} course={this.state.course}/>
         ))}

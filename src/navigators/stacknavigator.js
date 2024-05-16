@@ -14,6 +14,7 @@ import SemesterScreen from "../screens/SemesterScreen";
 import SubjectScreen from "../screens/SubjectScreen";
 import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import PdfViewer from "../screens/PdfViewer";
 // import HomeScreen from "../../screens/HomeScreen";
 // import VideosScreen from "../../screens/VideosScreen";
 // import ShopByPrice from "../../screens/ShopByPrice";
@@ -122,6 +123,11 @@ class StackNavigator extends React.Component {
                         <Stack.Screen
                             name='SubjectScreen'
                             component={SubjectScreen}
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen
+                            name='PdfViewer'
+                            component={PdfViewer}
                             options={{ headerShown: false }} 
                         />
                         {/* <Stack.Screen

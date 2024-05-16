@@ -1,8 +1,9 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React, { Component } from 'react'
 import SubjectCard from '../Cards/SubjectCard';
 import firestore from '@react-native-firebase/firestore';
 import {Filter} from '@react-native-firebase/firestore/lib/FirestoreFilter.js';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 
 class SubjectScreen extends Component{
@@ -40,15 +41,18 @@ class SubjectScreen extends Component{
 
   render() {
     return (
-      <View style={{flex:1}}>
-     <View style={{alignItems:'center'}}>
-      <Text style={{fontSize:20}}>Subjects</Text>
+      <View style={{flex:1,alignContent:'center',justifyContent:'center'}}>
+        <ScrollView>
+     <View style={{ marginBottom:hp(6)}}>
+      <Text style={{fontSize: 30,textAlign: 'center',color:'black'}}>SUBJECTS</Text>
      </View>
-     <View>
+     <View style={{marginHorizontal:wp(3)}}>
+     
       {this.state.subjects.map(subject=>(
-        <SubjectCard name={subject}/>
+        <SubjectCard name={subject} course={this.state.courseName} sem={this.state.sem}/>
       ))}
      </View>
+     </ScrollView>
      </View>
      
      

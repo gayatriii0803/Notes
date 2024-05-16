@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import HomeCard from '../Cards/HomeCard'
 import { navigate } from '../navigators/RootNavigation';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class HomeScreen extends Component {
   constructor(props){
@@ -17,11 +18,11 @@ class HomeScreen extends Component {
   render(){
     
   return (
-    <View style={{flex:1}}>
-    <View style={{alignItems:'center'}}>
-     <Text style={{fontSize:22}}>KEEP NOTES</Text>
+    <View style={{flex:1,alignContent:'center',justifyContent:'center'}}>
+    <View style={{marginBottom:hp(6)}}>
+     <Text style={{fontSize: 30,textAlign: 'center',color:'black'}}>COURSES</Text>
     </View>
-    <View style={{justifyContent:'center',flex:1}}>
+    <View style={{marginHorizontal:wp(3)}}>
         {this.state.courses.map(course =>(
           <HomeCard id={course.id} name={course.name}/>
         ))}
