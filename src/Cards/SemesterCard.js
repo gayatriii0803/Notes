@@ -23,7 +23,8 @@ const SemesterCard = ({id, name, course}) => {
     justifyContent:'center',
     alignSelf:'center',
     borderWidth: 1,
-    margin:12
+    margin:12,
+    
           }}>
           <Text style={{ color: 'black',fontSize: 16,textAlign: 'center',padding:3 }}>{name}</Text>
         </TouchableOpacity>

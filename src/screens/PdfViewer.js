@@ -34,6 +34,7 @@ export default class PdfViewer extends Component {
 
     fetchDownloadURL = async () => {
         try {
+            console.log(`${this.state.course}/${this.state.sem}/${this.state.subject}/${this.state.subject}.pdf`)
           const url = await storage().ref(`${this.state.course}/${this.state.sem}/${this.state.subject}/${this.state.subject}.pdf`).getDownloadURL();
           // this.setState({ downloadURL: url });
           this.setState({uri:url})

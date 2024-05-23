@@ -44,6 +44,7 @@ class SubjectScreen extends Component{
       <View style={{flex:1,alignContent:'center',justifyContent:'center'}}>
         <ScrollView>
      <View style={{ marginBottom:hp(6)}}>
+      <Text style={{fontSize:25,alignSelf:'center',color:'black'}}>SEMESTER {this.state.sem}</Text>
       <Text style={{fontSize: 30,textAlign: 'center',color:'black'}}>SUBJECTS</Text>
      </View>
      <View style={{marginHorizontal:wp(3)}}>

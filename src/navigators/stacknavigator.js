@@ -15,6 +15,7 @@ import SubjectScreen from "../screens/SubjectScreen";
 import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import PdfViewer from "../screens/PdfViewer";
+import SplashScreen from "../screens/SplashScreen";
 // import HomeScreen from "../../screens/HomeScreen";
 // import VideosScreen from "../../screens/VideosScreen";
 // import ShopByPrice from "../../screens/ShopByPrice";
@@ -86,7 +87,7 @@ class StackNavigator extends React.Component {
                 
                 >
                     <Stack.Navigator
-                        initialRouteName="LoginScreen"
+                        initialRouteName="SplashScreen"
                         // screenOptions={{
                         //     headerShown: false,
                         //     title: "",
@@ -100,6 +101,11 @@ class StackNavigator extends React.Component {
 
 
                         {/* Authentication */}
+                        <Stack.Screen
+                            name='SplashScreen'
+                            component={SplashScreen}
+                            options={{ headerShown: false }} 
+                        />
                         <Stack.Screen
                             name='LoginScreen'
                             component={LoginScreen}

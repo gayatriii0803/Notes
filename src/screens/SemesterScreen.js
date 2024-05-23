@@ -28,9 +28,11 @@ class SemesterScreen extends Component {
     return (
       <View style={{flex:1,alignContent:'center',justifyContent:'center'}}>
         <View style={{ marginBottom:hp(6) }}>
+        <Text style={{alignSelf:'center',fontSize:25,marginTop:12,color:'black'}}>{this.state.course}</Text>
           <Text style={{fontSize: 30,textAlign: 'center',color:'black'}}>SEMESTERS</Text>
+          
         </View>
-        <View style={{marginHorizontal:wp(3)}}>
+        <View style={{marginHorizontal:wp(3),marginBottom:30}}>
         {this.state.semesters.map(semester =>(
           <SemesterCard id={semester.id} name={semester.name} course={this.state.course}/>
         ))}
