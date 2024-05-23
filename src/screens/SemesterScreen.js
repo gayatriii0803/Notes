@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import SemesterCard from '../Cards/SemesterCard';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
@@ -26,7 +26,7 @@ class SemesterScreen extends Component {
 
   render() {
     return (
-      <View style={{flex:1,alignContent:'center',justifyContent:'center'}}>
+      <ScrollView style={{flex:1,alignContent:'center',}}>
         <View style={{ marginBottom:hp(6) }}>
         <Text style={{alignSelf:'center',fontSize:25,marginTop:12,color:'black'}}>{this.state.course}</Text>
           <Text style={{fontSize: 30,textAlign: 'center',color:'black'}}>SEMESTERS</Text>
@@ -37,7 +37,7 @@ class SemesterScreen extends Component {
           <SemesterCard id={semester.id} name={semester.name} course={this.state.course}/>
         ))}
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
