@@ -31,7 +31,7 @@ class SplashScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-        <Image source={require('../assets/book4.png')} style={{ height: wp(70), width: wp(70) }} />
+        <Image source={require('../assets/book6.png')} style={{ height: wp(70), width: wp(70) }} />
         <Text style={{ fontSize: 30, color: 'black' }}>NOTES</Text>
       </View>
     );
